@@ -11,7 +11,7 @@ body {
 .hero-section {
   min-height: 60vh;
   background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600') center/cover no-repeat;
+        url('../img/hero-background.jfif') center/cover no-repeat;
 }
 
 .filter-buttons .btn.active {
