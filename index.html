@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeternum Watches | Relojes de lujo minimalista</title>
+<!-- Tema oficial Bootswatch: Lux -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR (Bootstrap puro) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">AETERNUM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#coleccion">Colección</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ventajas">Por qué elegirnos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO (adaptado de plantilla externa Start Bootstrap - Shop Homepage) ===== -->
+<header class="hero-section text-center text-white d-flex align-items-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Tiempo con carácter</h1>
+    <p class="lead mb-4">Relojes minimalistas diseñados para durar generaciones.</p>
+    <a href="#coleccion" class="btn btn-primary btn-lg">Ver colección</a>
+  </div>
+</header>
+
+<!-- ===== CARRUSEL (interactividad Bootstrap) ===== -->
+<div id="heroCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner container">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=1200" class="d-block w-100 rounded" alt="Reloj clásico">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=1200" class="d-block w-100 rounded" alt="Reloj deportivo">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200" class="d-block w-100 rounded" alt="Reloj elegante">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- ===== FILTRO + CATÁLOGO (JS interactivo, plantilla externa adaptada) ===== -->
+<section id="coleccion" class="container py-5">
+  <h2 class="text-center mb-4">Nuestra Colección</h2>
+
+  <div class="text-center mb-4 filter-buttons">
+    <button class="btn btn-outline-primary m-1 active" data-filter="all">Todos</button>
+    <button class="btn btn-outline-primary m-1" data-filter="clasico">Clásicos</button>
+    <button class="btn btn-outline-primary m-1" data-filter="deportivo">Deportivos</button>
+    <button class="btn btn-outline-primary m-1" data-filter="elegante">Elegantes</button>
+  </div>
+
+  <div class="row g-4" id="productGrid">
+
+    <div class="col-md-4 product-item" data-category="clasico">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500" class="card-img-top" alt="Classic Steel">
+        <div class="card-body">
+          <h5 class="card-title">Classic Steel</h5>
+          <p class="card-text text-muted">Acero inoxidable, esfera blanca.</p>
+          <p class="fw-bold">249 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Classic Steel" data-price="249 €" data-img="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500"
+            data-desc="Reloj clásico de acero inoxidable con esfera blanca y correa de cuero genuino.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-item" data-category="deportivo">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500" class="card-img-top" alt="Sport Chrono">
+        <div class="card-body">
+          <h5 class="card-title">Sport Chrono</h5>
+          <p class="card-text text-muted">Resistente al agua, cronógrafo.</p>
+          <p class="fw-bold">329 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Sport Chrono" data-price="329 €" data-img="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500"
+            data-desc="Cronógrafo deportivo resistente al agua hasta 100m, correa de silicona.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-item" data-category="elegante">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" class="card-img-top" alt="Noir Elegance">
+        <div class="card-body">
+          <h5 class="card-title">Noir Elegance</h5>
+          <p class="card-text text-muted">Edición limitada, esfera negra.</p>
+          <p class="fw-bold">459 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Noir Elegance" data-price="459 €" data-img="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500"
+            data-desc="Edición limitada con esfera negra mate y bisel dorado, correa de cuero premium.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-item" data-category="clasico">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500" class="card-img-top" alt="Heritage">
+        <div class="card-body">
+          <h5 class="card-title">Heritage</h5>
+          <p class="card-text text-muted">Diseño vintage restaurado.</p>
+          <p class="fw-bold">279 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Heritage" data-price="279 €" data-img="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500"
+            data-desc="Diseño de inspiración vintage con maquinaria automática visible.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-item" data-category="deportivo">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500" class="card-img-top" alt="Trail Runner">
+        <div class="card-body">
+          <h5 class="card-title">Trail Runner</h5>
+          <p class="card-text text-muted">Ultraligero, GPS integrado.</p>
+          <p class="fw-bold">399 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Trail Runner" data-price="399 €" data-img="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500"
+            data-desc="Reloj deportivo ultraligero con GPS integrado, ideal para running y trekking.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-item" data-category="elegante">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500" class="card-img-top" alt="Gold Line">
+        <div class="card-body">
+          <h5 class="card-title">Gold Line</h5>
+          <p class="card-text text-muted">Chapado en oro, correa milanesa.</p>
+          <p class="fw-bold">499 €</p>
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+            data-name="Gold Line" data-price="499 €" data-img="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500"
+            data-desc="Reloj chapado en oro de 18k con correa milanesa y cristal de zafiro.">
+            Ver detalles
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== VENTAJAS ===== -->
+<section id="ventajas" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Por qué elegirnos</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <i class="bi bi-shield-check fs-1 text-primary"></i>
+        <h5 class="mt-3">Garantía 2 años</h5>
+        <p class="text-muted">Cobertura completa en todos nuestros modelos.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-truck fs-1 text-primary"></i>
+        <h5 class="mt-3">Envío gratuito</h5>
+        <p class="text-muted">Entrega en 24-48h en toda la península.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-arrow-repeat fs-1 text-primary"></i>
+        <h5 class="mt-3">Devolución 30 días</h5>
+        <p class="text-muted">Sin preguntas, dinero de vuelta garantizado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO / NEWSLETTER (Bootstrap form) ===== -->
+<section id="contacto" class="container py-5">
+  <h2 class="text-center mb-4">Contáctanos</h2>
+  <form class="row g-3 justify-content-center" id="contactForm" novalidate>
+    <div class="col-md-5">
+      <label class="form-label">Nombre</label>
+      <input type="text" class="form-control" required>
+    </div>
+    <div class="col-md-5">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" required>
+    </div>
+    <div class="col-md-10">
+      <label class="form-label">Mensaje</label>
+      <textarea class="form-control" rows="3" required></textarea>
+    </div>
+    <div class="col-md-10 text-center">
+      <button type="submit" class="btn btn-primary px-5">Enviar</button>
+    </div>
+    <div class="col-md-10 text-center">
+      <div id="formAlert" class="alert alert-success mt-3 d-none" role="alert">
+        ¡Gracias por tu mensaje! Te contactaremos pronto.
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- ===== MODAL DE PRODUCTO (interactividad JS + Bootstrap) ===== -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProductName">Nombre del reloj</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalProductImg" src="" class="img-fluid rounded mb-3" alt="Producto">
+        <p id="modalProductDesc" class="text-muted"></p>
+        <h4 id="modalProductPrice" class="fw-bold"></h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER (adaptado de plantilla externa) ===== -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold">AETERNUM WATCHES</p>
+    <p class="mb-2 small">Relojes minimalistas de alta calidad desde 2020.</p>
+    <div class="mb-2">
+      <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <p class="small mb-0">&copy; 2026 Aeternum Watches. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle JS (incluye Popper, necesario para modal/carrusel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
