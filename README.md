@@ -55,3 +55,23 @@ Sitio publicado con GitHub Pages: https://dariocs1910.github.io/aeternum-watches
 - Bootstrap Icons
 - JavaScript (ES6, vanilla, sin frameworks)
 - localStorage para persistencia del carrito
+
+
+## Actualizacion: seccion FAQ y extraccion de plantilla externa
+
+### Componente FAQ (Bootstrap Accordion)
+Se incorporo una seccion de Preguntas Frecuentes utilizando el componente Accordion de Bootstrap 5. La estructura visual y de contenido (agrupacion de preguntas sobre garantia, envios, devoluciones y metodos de pago) se tomo como referencia de la plantilla gratuita "Luxury" de TemplatesJungle (https://demo.templatesjungle.com/luxury/), adaptando el HTML al sistema de clases de Bootstrap 5 y al tema Bootswatch Lux ya utilizado en el proyecto, en lugar de copiar el CSS original de la plantilla.
+
+### Proceso de extraccion (punto 2 del enunciado)
+1. Se localizo una plantilla externa gratuita de tematica relojera/lujo (Luxury - TemplatesJungle).
+2. Se identificaron componentes reutilizables: seccion destacada a pantalla completa y bloque de preguntas frecuentes.
+3. Se extrajo unicamente la estructura y el proposito de cada componente (no el CSS ni JS original).
+4. Se reconstruyeron con clases nativas de Bootstrap 5 y variables del tema Lux para mantener coherencia visual con el resto del sitio.
+5. Se documenta aqui el origen para trazabilidad academica.
+
+### Accesibilidad y usabilidad (UF1843)
+- Uso de etiquetas semanticas (nav, section, footer) y encabezados jerarquicos.
+- Botones del accordion con atributos aria (data-bs-toggle, aria-expanded gestionados por Bootstrap).
+- Contraste de color verificado con el tema Lux (texto oscuro sobre fondos claros y viceversa).
+- Formularios con etiquetas (label) asociadas a cada campo y validacion visual.
+- Navegacion por teclado soportada de forma nativa por los componentes de Bootstrap (modales, offcanvas, accordion, navbar).
