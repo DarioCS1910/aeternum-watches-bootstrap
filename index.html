@@ -3,41 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aeternum Watches | Relojes de lujo minimalista</title>
-<!-- Tema oficial Bootswatch: Lux -->
+<title>Chronos Élite | Relojería de alta gama</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR (Bootstrap puro) ===== -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">AETERNUM</a>
+    <a class="navbar-brand fw-bold" href="#">CHRONOS ÉLITE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="#coleccion">Colección</a></li>
         <li class="nav-item"><a class="nav-link" href="#ventajas">Por qué elegirnos</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light ms-lg-3 position-relative" id="cartBtn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <i class="bi bi-bag"></i> Carrito
+            <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" id="cartCount">0</span>
+          </button>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO (adaptado de plantilla externa Start Bootstrap - Shop Homepage) ===== -->
 <header class="hero-section text-center text-white d-flex align-items-center">
   <div class="container">
-    <h1 class="display-4 fw-bold">Tiempo con carácter</h1>
-    <p class="lead mb-4">Relojes minimalistas diseñados para durar generaciones.</p>
+    <h1 class="display-4 fw-bold">Relojería de alta gama</h1>
+    <p class="lead mb-4">Las firmas más prestigiosas del mundo, en un mismo lugar.</p>
     <a href="#coleccion" class="btn btn-primary btn-lg">Ver colección</a>
   </div>
 </header>
 
-<!-- ===== CARRUSEL (interactividad Bootstrap) ===== -->
 <div id="heroCarousel" class="carousel slide my-5" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
@@ -46,13 +48,13 @@
   </div>
   <div class="carousel-inner container">
     <div class="carousel-item active">
-      <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=1200" class="d-block w-100 rounded" alt="Reloj clásico">
+      <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1200" class="d-block w-100 rounded" alt="Rolex Submariner">
     </div>
     <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=1200" class="d-block w-100 rounded" alt="Reloj deportivo">
+      <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=1200" class="d-block w-100 rounded" alt="Omega Speedmaster">
     </div>
     <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200" class="d-block w-100 rounded" alt="Reloj elegante">
+      <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=1200" class="d-block w-100 rounded" alt="Cartier Tank">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -63,29 +65,28 @@
   </button>
 </div>
 
-<!-- ===== FILTRO + CATÁLOGO (JS interactivo, plantilla externa adaptada) ===== -->
 <section id="coleccion" class="container py-5">
   <h2 class="text-center mb-4">Nuestra Colección</h2>
-
   <div class="text-center mb-4 filter-buttons">
     <button class="btn btn-outline-primary m-1 active" data-filter="all">Todos</button>
     <button class="btn btn-outline-primary m-1" data-filter="clasico">Clásicos</button>
     <button class="btn btn-outline-primary m-1" data-filter="deportivo">Deportivos</button>
     <button class="btn btn-outline-primary m-1" data-filter="elegante">Elegantes</button>
   </div>
-
   <div class="row g-4" id="productGrid">
 
-    <div class="col-md-4 product-item" data-category="clasico">
+    <div class="col-md-4 product-item" data-category="deportivo">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500" class="card-img-top" alt="Classic Steel">
-        <div class="card-body">
-          <h5 class="card-title">Classic Steel</h5>
-          <p class="card-text text-muted">Acero inoxidable, esfera blanca.</p>
-          <p class="fw-bold">249 €</p>
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500" class="card-img-top" alt="Rolex Submariner">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">Rolex</h6>
+          <h5 class="card-title">Submariner Date</h5>
+          <p class="card-text text-muted">Acero Oystersteel, esfera negra, sumergible 300m.</p>
+          <p class="fw-bold fs-5 mt-auto">9.850 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Classic Steel" data-price="249 €" data-img="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500"
-            data-desc="Reloj clásico de acero inoxidable con esfera blanca y correa de cuero genuino.">
+            data-id="1" data-brand="Rolex" data-name="Submariner Date" data-price="9850"
+            data-img="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500"
+            data-desc="Icono absoluto del reloj de buceo. Caja de 41mm en Oystersteel, bisel cerámico unidireccional y movimiento automático de manufactura.">
             Ver detalles
           </button>
         </div>
@@ -94,14 +95,16 @@
 
     <div class="col-md-4 product-item" data-category="deportivo">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500" class="card-img-top" alt="Sport Chrono">
-        <div class="card-body">
-          <h5 class="card-title">Sport Chrono</h5>
-          <p class="card-text text-muted">Resistente al agua, cronógrafo.</p>
-          <p class="fw-bold">329 €</p>
+        <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=500" class="card-img-top" alt="Omega Speedmaster">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">Omega</h6>
+          <h5 class="card-title">Speedmaster Moonwatch</h5>
+          <p class="card-text text-muted">Cronógrafo manual, el reloj que llegó a la Luna.</p>
+          <p class="fw-bold fs-5 mt-auto">7.200 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Sport Chrono" data-price="329 €" data-img="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=500"
-            data-desc="Cronógrafo deportivo resistente al agua hasta 100m, correa de silicona.">
+            data-id="2" data-brand="Omega" data-name="Speedmaster Moonwatch" data-price="7200"
+            data-img="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=500"
+            data-desc="El cronógrafo legendario certificado por la NASA. Caja de acero de 42mm y cristal hesalita.">
             Ver detalles
           </button>
         </div>
@@ -110,14 +113,16 @@
 
     <div class="col-md-4 product-item" data-category="elegante">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" class="card-img-top" alt="Noir Elegance">
-        <div class="card-body">
-          <h5 class="card-title">Noir Elegance</h5>
-          <p class="card-text text-muted">Edición limitada, esfera negra.</p>
-          <p class="fw-bold">459 €</p>
+        <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=500" class="card-img-top" alt="Cartier Tank">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">Cartier</h6>
+          <h5 class="card-title">Tank Must</h5>
+          <p class="card-text text-muted">Diseño Art Déco atemporal, correa de piel.</p>
+          <p class="fw-bold fs-5 mt-auto">3.150 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Noir Elegance" data-price="459 €" data-img="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500"
-            data-desc="Edición limitada con esfera negra mate y bisel dorado, correa de cuero premium.">
+            data-id="3" data-brand="Cartier" data-name="Tank Must" data-price="3150"
+            data-img="https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=500"
+            data-desc="Silueta rectangular icónica desde 1917. Caja de acero, esfera romana y correa de piel de becerro.">
             Ver detalles
           </button>
         </div>
@@ -126,14 +131,16 @@
 
     <div class="col-md-4 product-item" data-category="clasico">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500" class="card-img-top" alt="Heritage">
-        <div class="card-body">
-          <h5 class="card-title">Heritage</h5>
-          <p class="card-text text-muted">Diseño vintage restaurado.</p>
-          <p class="fw-bold">279 €</p>
+        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500" class="card-img-top" alt="Longines Master Collection">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">Longines</h6>
+          <h5 class="card-title">Master Collection</h5>
+          <p class="card-text text-muted">Elegancia clásica suiza, fecha y esfera plateada.</p>
+          <p class="fw-bold fs-5 mt-auto">2.180 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Heritage" data-price="279 €" data-img="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500"
-            data-desc="Diseño de inspiración vintage con maquinaria automática visible.">
+            data-id="4" data-brand="Longines" data-name="Master Collection" data-price="2180"
+            data-img="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500"
+            data-desc="Herencia relojera suiza desde 1832. Movimiento automático, caja de acero de 40mm y cristal de zafiro.">
             Ver detalles
           </button>
         </div>
@@ -142,14 +149,16 @@
 
     <div class="col-md-4 product-item" data-category="deportivo">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500" class="card-img-top" alt="Trail Runner">
-        <div class="card-body">
-          <h5 class="card-title">Trail Runner</h5>
-          <p class="card-text text-muted">Ultraligero, GPS integrado.</p>
-          <p class="fw-bold">399 €</p>
+        <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500" class="card-img-top" alt="Seiko Prospex">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">Seiko</h6>
+          <h5 class="card-title">Prospex Diver</h5>
+          <p class="card-text text-muted">Robusto reloj de buceo japonés, gran fiabilidad.</p>
+          <p class="fw-bold fs-5 mt-auto">620 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Trail Runner" data-price="399 €" data-img="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500"
-            data-desc="Reloj deportivo ultraligero con GPS integrado, ideal para running y trekking.">
+            data-id="5" data-brand="Seiko" data-name="Prospex Diver" data-price="620"
+            data-img="https://images.unsplash.com/photo-1526045478516-99145907023c?w=500"
+            data-desc="Reloj de buceo profesional resistente a 200m, con movimiento automático y bisel giratorio.">
             Ver detalles
           </button>
         </div>
@@ -158,14 +167,16 @@
 
     <div class="col-md-4 product-item" data-category="elegante">
       <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500" class="card-img-top" alt="Gold Line">
-        <div class="card-body">
-          <h5 class="card-title">Gold Line</h5>
-          <p class="card-text text-muted">Chapado en oro, correa milanesa.</p>
-          <p class="fw-bold">499 €</p>
+        <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500" class="card-img-top" alt="TAG Heuer Carrera">
+        <div class="card-body d-flex flex-column">
+          <h6 class="text-muted mb-1">TAG Heuer</h6>
+          <h5 class="card-title">Carrera Chronograph</h5>
+          <p class="card-text text-muted">Espíritu de carreras, chapado en oro, correa milanesa.</p>
+          <p class="fw-bold fs-5 mt-auto">4.590 €</p>
           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-name="Gold Line" data-price="499 €" data-img="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500"
-            data-desc="Reloj chapado en oro de 18k con correa milanesa y cristal de zafiro.">
+            data-id="6" data-brand="TAG Heuer" data-name="Carrera Chronograph" data-price="4590"
+            data-img="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500"
+            data-desc="Inspirado en el automovilismo de los años 60. Cronógrafo automático con acabados de alta gama.">
             Ver detalles
           </button>
         </div>
@@ -175,22 +186,26 @@
   </div>
 </section>
 
-<!-- ===== VENTAJAS ===== -->
 <section id="ventajas" class="bg-light py-5">
   <div class="container">
     <h2 class="text-center mb-5">Por qué elegirnos</h2>
     <div class="row text-center g-4">
-      <div class="col-md-4">
+      <div class="col-md-3">
+        <i class="bi bi-patch-check fs-1 text-primary"></i>
+        <h5 class="mt-3">Autenticidad garantizada</h5>
+        <p class="text-muted">Certificado de originalidad en cada pieza.</p>
+      </div>
+      <div class="col-md-3">
         <i class="bi bi-shield-check fs-1 text-primary"></i>
         <h5 class="mt-3">Garantía 2 años</h5>
-        <p class="text-muted">Cobertura completa en todos nuestros modelos.</p>
+        <p class="text-muted">Cobertura oficial en todos nuestros modelos.</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <i class="bi bi-truck fs-1 text-primary"></i>
-        <h5 class="mt-3">Envío gratuito</h5>
-        <p class="text-muted">Entrega en 24-48h en toda la península.</p>
+        <h5 class="mt-3">Envío asegurado</h5>
+        <p class="text-muted">Transporte con seguro incluido a toda España.</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <i class="bi bi-arrow-repeat fs-1 text-primary"></i>
         <h5 class="mt-3">Devolución 30 días</h5>
         <p class="text-muted">Sin preguntas, dinero de vuelta garantizado.</p>
@@ -199,69 +214,237 @@
   </div>
 </section>
 
-<!-- ===== CONTACTO / NEWSLETTER (Bootstrap form) ===== -->
 <section id="contacto" class="container py-5">
   <h2 class="text-center mb-4">Contáctanos</h2>
   <form class="row g-3 justify-content-center" id="contactForm" novalidate>
     <div class="col-md-5">
       <label class="form-label">Nombre</label>
       <input type="text" class="form-control" required>
+      <div class="invalid-feedback">Introduce tu nombre.</div>
     </div>
     <div class="col-md-5">
       <label class="form-label">Email</label>
       <input type="email" class="form-control" required>
+      <div class="invalid-feedback">Introduce un email válido.</div>
     </div>
     <div class="col-md-10">
       <label class="form-label">Mensaje</label>
       <textarea class="form-control" rows="3" required></textarea>
+      <div class="invalid-feedback">Escribe un mensaje.</div>
     </div>
     <div class="col-md-10 text-center">
-      <button type="submit" class="btn btn-primary px-5">Enviar</button>
+      <button class="btn btn-primary px-5" type="submit">Enviar</button>
     </div>
-    <div class="col-md-10 text-center">
-      <div id="formAlert" class="alert alert-success mt-3 d-none" role="alert">
-        ¡Gracias por tu mensaje! Te contactaremos pronto.
-      </div>
+    <div class="col-md-10">
+      <div class="alert alert-success mt-3 d-none" id="contactSuccess">¡Gracias por tu mensaje! Te contactaremos pronto.</div>
     </div>
   </form>
 </section>
 
-<!-- ===== MODAL DE PRODUCTO (interactividad JS + Bootstrap) ===== -->
-<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+<!-- Modal detalle de producto -->
+<div class="modal fade" id="productModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalProductName">Nombre del reloj</h5>
+        <h5 class="modal-title" id="modalBrand">Marca</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body text-center">
-        <img id="modalProductImg" src="" class="img-fluid rounded mb-3" alt="Producto">
-        <p id="modalProductDesc" class="text-muted"></p>
-        <h4 id="modalProductPrice" class="fw-bold"></h4>
+      <div class="modal-body">
+        <img id="modalImg" src="" class="img-fluid rounded mb-3" alt="">
+        <h4 id="modalName">Nombre del reloj</h4>
+        <p id="modalDesc" class="text-muted"></p>
+        <p class="fw-bold fs-4" id="modalPrice">0 €</p>
+        <div class="row g-2 mb-3">
+          <div class="col-6">
+            <label class="form-label">Correa</label>
+            <select class="form-select" id="modalStrap">
+              <option value="Acero">Acero</option>
+              <option value="Piel">Piel</option>
+              <option value="Caucho">Caucho</option>
+              <option value="Milanesa">Milanesa</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label class="form-label">Talla caja</label>
+            <select class="form-select" id="modalSize">
+              <option value="38mm">38mm</option>
+              <option value="40mm">40mm</option>
+              <option value="42mm">42mm</option>
+              <option value="44mm">44mm</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <label class="form-label mb-0">Cantidad</label>
+          <input type="number" id="modalQty" class="form-control" style="width:80px" value="1" min="1">
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="addToCartBtn">Añadir al carrito</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===== FOOTER (adaptado de plantilla externa) ===== -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p class="mb-1 fw-bold">AETERNUM WATCHES</p>
-    <p class="mb-2 small">Relojes minimalistas de alta calidad desde 2020.</p>
-    <div class="mb-2">
-      <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x"></i></a>
+<!-- Offcanvas carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><i class="bi bi-bag"></i> Tu carrito</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="flex-grow-1">
+      <p class="text-muted text-center" id="emptyCartMsg">Tu carrito está vacío.</p>
     </div>
-    <p class="small mb-0">&copy; 2026 Aeternum Watches. Todos los derechos reservados.</p>
+    <hr>
+    <div class="d-flex justify-content-between fs-5 fw-bold">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">0 €</span>
+    </div>
+    <button class="btn btn-primary w-100 mt-3" id="goCheckoutBtn" data-bs-toggle="modal" data-bs-target="#checkoutModal">Finalizar compra</button>
+  </div>
+</div>
+
+<!-- Modal Checkout multi-paso -->
+<div class="modal fade" id="checkoutModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Finalizar compra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Stepper -->
+        <div class="d-flex justify-content-between mb-4 checkout-stepper">
+          <div class="step active" data-step="1"><span>1</span>Envío</div>
+          <div class="step" data-step="2"><span>2</span>Entrega</div>
+          <div class="step" data-step="3"><span>3</span>Pago</div>
+          <div class="step" data-step="4"><span>4</span>Resumen</div>
+        </div>
+
+        <!-- Paso 1: Datos de envío -->
+        <div class="checkout-panel" id="panel1">
+          <h6 class="mb-3">Datos de envío</h6>
+          <form id="shippingForm" class="row g-3" novalidate>
+            <div class="col-md-6">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="shipName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="shipEmail" required>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="shipAddress" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Código postal</label>
+              <input type="text" class="form-control" id="shipZip" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="shipCity" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="shipPhone" required>
+            </div>
+          </form>
+        </div>
+
+        <!-- Paso 2: Tipo de entrega -->
+        <div class="checkout-panel d-none" id="panel2">
+          <h6 class="mb-3">Selecciona el tipo de entrega</h6>
+          <div class="list-group">
+            <label class="list-group-item d-flex justify-content-between align-items-center">
+              <span><input type="radio" name="delivery" value="0" class="form-check-input me-2" checked>Estándar (3-5 días)</span>
+              <span class="fw-bold">Gratis</span>
+            </label>
+            <label class="list-group-item d-flex justify-content-between align-items-center">
+              <span><input type="radio" name="delivery" value="19" class="form-check-input me-2">Express (24-48h)</span>
+              <span class="fw-bold">19 €</span>
+            </label>
+            <label class="list-group-item d-flex justify-content-between align-items-center">
+              <span><input type="radio" name="delivery" value="45" class="form-check-input me-2">Premium con seguro (24h)</span>
+              <span class="fw-bold">45 €</span>
+            </label>
+            <label class="list-group-item d-flex justify-content-between align-items-center">
+              <span><input type="radio" name="delivery" value="0" class="form-check-input me-2">Recogida en tienda (Madrid)</span>
+              <span class="fw-bold">Gratis</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Paso 3: Pago -->
+        <div class="checkout-panel d-none" id="panel3">
+          <h6 class="mb-3">Método de pago</h6>
+          <div class="btn-group w-100 mb-3" role="group">
+            <input type="radio" class="btn-check" name="payMethod" id="payCard" checked>
+            <label class="btn btn-outline-primary" for="payCard">Tarjeta</label>
+            <input type="radio" class="btn-check" name="payMethod" id="payPaypal">
+            <label class="btn btn-outline-primary" for="payPaypal">PayPal</label>
+            <input type="radio" class="btn-check" name="payMethod" id="payTransfer">
+            <label class="btn btn-outline-primary" for="payTransfer">Transferencia</label>
+          </div>
+          <form id="cardForm" class="row g-3" novalidate>
+            <div class="col-md-8">
+              <label class="form-label">Nombre en la tarjeta</label>
+              <input type="text" class="form-control" id="cardName" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Vencimiento</label>
+              <input type="text" placeholder="MM/AA" class="form-control" id="cardExpiry" required>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Número de tarjeta</label>
+              <input type="text" placeholder="**** **** **** ****" class="form-control" id="cardNumber" required maxlength="19">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cardCvv" required maxlength="4">
+            </div>
+          </form>
+          <p id="paypalMsg" class="d-none text-muted">Serás redirigido a PayPal de forma simulada para completar el pago de forma segura.</p>
+          <p id="transferMsg" class="d-none text-muted">Recibirás los datos bancarios por email para completar la transferencia.</p>
+        </div>
+
+        <!-- Paso 4: Resumen -->
+        <div class="checkout-panel d-none" id="panel4">
+          <h6 class="mb-3">Resumen del pedido</h6>
+          <div id="summaryItems"></div>
+          <hr>
+          <div class="d-flex justify-content-between"><span>Subtotal</span><span id="summarySubtotal">0 €</span></div>
+          <div class="d-flex justify-content-between"><span>Entrega</span><span id="summaryShipping">0 €</span></div>
+          <div class="d-flex justify-content-between fw-bold fs-5 mt-2"><span>Total</span><span id="summaryTotal">0 €</span></div>
+          <div class="alert alert-success mt-3 d-none" id="orderConfirmedMsg">
+            ¡Pedido confirmado! Número de pedido: <strong id="orderNumber"></strong>. Recibirás un email de confirmación.
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" id="checkoutBackBtn">Atrás</button>
+        <button type="button" class="btn btn-primary" id="checkoutNextBtn">Siguiente</button>
+        <button type="button" class="btn btn-success d-none" id="checkoutConfirmBtn">Confirmar pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <h5 class="fw-bold">CHRONOS ÉLITE</h5>
+    <p class="text-muted mb-2">Relojería de alta gama desde 2020.</p>
+    <div class="mb-2">
+      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <small>&copy; 2026 Chronos Élite. Todos los derechos reservados.</small>
   </div>
 </footer>
 
-<!-- Bootstrap Bundle JS (incluye Popper, necesario para modal/carrusel) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
